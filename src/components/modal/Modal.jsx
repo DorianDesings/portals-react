@@ -1,13 +1,15 @@
 import { createPortal } from 'react-dom';
-import { StyledModal } from './styles';
+import { StyledModal, StyledModalContent } from './styles';
 
 const Modal = ({ closeModal, children }) => {
 	if (!children) return;
 
 	return createPortal(
 		<StyledModal>
-			{children}
-			<button onClick={closeModal}>X</button>
+			<StyledModalContent>
+				{children}
+				<button onClick={closeModal}>X</button>
+			</StyledModalContent>
 		</StyledModal>,
 		document.getElementById('modal')
 	);

@@ -10,7 +10,13 @@ const StyledModal = styled.div`
 	width: 100vw;
 	height: 100vh;
 	color: aliceblue;
-	background-color: rgb(0 0 0 / 0.8);
+	background-color: transparent;
 `;
 
-export { StyledModal };
+const StyledModalContent = styled.div`
+	width: 400px;
+	height: 400px;
+	background-color: #333;
+`;
+
+export { StyledModal, StyledModalContent };
